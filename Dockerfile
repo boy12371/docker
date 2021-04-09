@@ -56,7 +56,7 @@ RUN apt-get update && apt-get install -y \
 	mercurial \
 	net-tools \
 	pkg-config \
-	python3 \
+	python3.6 \
 	python-dev \
 	python-mock \
 	python-websocket \
@@ -65,7 +65,6 @@ RUN apt-get update && apt-get install -y \
 	libzfslinux-dev \
 	tar \
 	zip
-RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 2
 RUN curl -s https://bootstrap.pypa.io/get-pip.py | python && pip install awscli==1.10.15
 
 # Get lvm2 source for compiling statically
