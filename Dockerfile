@@ -56,7 +56,6 @@ RUN apt-get update && apt-get install -y \
 	mercurial \
 	net-tools \
 	pkg-config \
-	python3.6 \
 	python-dev \
 	python-mock \
 	python-websocket \
@@ -65,7 +64,7 @@ RUN apt-get update && apt-get install -y \
 	libzfslinux-dev \
 	tar \
 	zip
-RUN curl -s https://bootstrap.pypa.io/get-pip.py | python && pip install awscli==1.10.15
+RUN curl -s https://bootstrap.pypa.io/pip/2.7/get-pip.py | python && pip install awscli==1.10.15
 
 # Get lvm2 source for compiling statically
 ENV LVM2_VERSION 2.02.103
